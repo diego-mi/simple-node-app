@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<form action="/promocoes" method="post">
+
+    <div>
+        <input type="text" name="mensagem"/>
+    </div>
+
+    <div>
+        <select name="livro[id]">
+
+            <%for(var i=0;i<lista.length;i++) {%>
+                <option value="<%= lista[i].id %>"><%= lista[i].titulo %></option>
+            <%}%>
+        </select>
+    </div>
+    <input type="submit" value="Cadastrar promoção"/>
+
+</form>
+</body>
+</html>
